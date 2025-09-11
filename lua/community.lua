@@ -7,4 +7,5 @@ return {
   { import = "astrocommunity.editing-support/rainbow-delimiters-nvim" },
   { import = "astrocommunity.colorscheme/tokyodark-nvim" },
   { import = "astrocommunity.editing-support/cutlass-nvim" },
+  { import = "astrocommunity.icon/mini-icons" },
 }
