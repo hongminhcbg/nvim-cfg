@@ -23,6 +23,10 @@ return {
             ["9"] = "0",
             -- save all
             ["<C-s>"] = { "<cmd>wa<cr>", desc = "save all" }, -- change description but the same command
+            -- spectre
+            ["<leader>S"] = {'<cmd>lua require("spectre").toggle()<CR>', desc="Toggle Spectre"},
+            ['<leader>sw'] = {'<cmd>lua require("spectre").open_visual({select_word=true})<CR>', desc="Search current word"},
+            ['<leader>sp'] = {'<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', desc="Search in current file"},
           },
           t = {
             -- setting a mapping to false will disable it
@@ -43,6 +47,7 @@ return {
           v = {
             ["0"] = "$",
             ["9"] = "0",
+            ['<leader>sw'] = {'<esc><cmd>lua require("spectre").open_visual()<CR>', desc="Search current word"},
           },
         },
       },

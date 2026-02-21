@@ -34,7 +34,7 @@ vim.api.nvim_set_keymap("v", "y", "y`]", {
     noremap = true,
     silent = true
 });
-vim.keymap.set('i', '<C-l>', 'copilot#Accept("\\<CR>")', {
+vim.keymap.set('i', '<C-y>', 'copilot#Accept("\\<CR>")', {
     expr = true,
     replace_keycodes = false
 })
