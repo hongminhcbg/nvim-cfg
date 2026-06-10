@@ -42,3 +42,12 @@ vim.api.nvim_set_keymap("v", "y", "y`]", {
  --   replace_keycodes = false
 --})
 vim.g.copilot_no_tab_map = true
+
+-- Autocmd to organize imports before saving
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+    -- Request organizeImports from gopls
+    vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+  end,
+})
