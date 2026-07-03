@@ -44,6 +44,7 @@ return {
             ['<c-k>'] = { '<up>' },
             ['<c-h>'] = { '<left>' },
             ['<c-l>'] = { '<right>' },
+            ["<c-e>"] = { "<cmd>GoIfErr<cr>", desc = "go if error" },
           },
           v = {
             ["0"] = "$",
